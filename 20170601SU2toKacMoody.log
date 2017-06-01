@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.1415926-p3.3-110825-2.4 (utf8.sjis) (TeX Live 2012/W32TeX) (format=platex 2012.7.12)  1 JUN 2017 10:26
+This is e-pTeX, Version 3.1415926-p3.3-110825-2.4 (utf8.sjis) (TeX Live 2012/W32TeX) (format=platex 2012.7.12)  1 JUN 2017 11:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -459,14 +459,14 @@ File: fig1.jpg Graphic file (type bmp)
  <fig1.jpg> [6]
 File: fig2.jpg Graphic file (type bmp)
 
-<fig2.jpg> [7]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 643.
- [8]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 643.
+<fig2.jpg> [7] [8]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 668.
+ [9]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 668.
  (./20170601SU2toKacMoody.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 643.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 643.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 643.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 668.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 668.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 668.
  ) 
 Here is how much of TeX's memory you used:
  8012 strings out of 494059
@@ -477,4 +477,4 @@ Here is how much of TeX's memory you used:
  745 hyphenation exceptions out of 8191
  29i,16n,28p,702b,392s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on 20170601SU2toKacMoody.dvi (8 pages, 27560 bytes).
+Output written on 20170601SU2toKacMoody.dvi (9 pages, 29432 bytes).
