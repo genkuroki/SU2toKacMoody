@@ -1,0 +1,402 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+Mathtodon
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+May 31, 2017 10:56am
+
+
+
+
+
+
+
+
+黒木玄 Gen Kuroki
+@genkuroki
+
+
+https://mathtod.online/@7shi/203900四元数と3次元の回転の関係は「Lie群 $SU(2)$ の随伴表現」。$i,j,k$ を正規直交基底とする3次元Euclid空間に $i,j,k$ 軸を中心とする角度 $2\theta$ の回転がそれぞれ\begin{align*}&amp;a\mapsto e^{i\theta}a e^{-i\theta},\\&amp;a\mapsto e^{j\theta}a e^{-j\theta},\\&amp;a\mapsto e^{k\theta}a e^{-k\theta}\end{align*}で作用している。Lie群 $SU(2)$ の四元数体 $\mathbb H$ を使った実現の仕方は\[SU(2)=\{\,g\in\mathbb H\mid |g|=1\,\}.\]これのLie代数が\[\operatorname{su}(2)=\mathbb Ri+\mathbb Rj+\mathbb Rk.\]$SU(2)$ の $\operatorname{su}(2)$ への随伴表現の特殊化が上で示した式。
+
+
+
+
+
+
+
+May 31, 2017  9:31pm
+
+
+
+
+
+
+
+
+黒木玄 Gen Kuroki
+@genkuroki
+
+
+複素数(実数と $i$ から生成される)を実2次正方行列によって\[i\mapsto\begin{bmatrix}0&amp;-1\\1&amp;0\end{bmatrix}\]と実現できることはよく知られている。四元数(実数と $i,j$ から生成される)も次によって複素2次正方行列で実現できる:\[i\mapsto\begin{bmatrix}i&amp;0\\0&amp;-i\end{bmatrix},\\j\mapsto\begin{bmatrix}0&amp;-1\\1&amp;0\end{bmatrix}.\]すなわち複素数 $z,w$ に対して\[z+jw\mapsto\begin{bmatrix}z&amp;-\overline{w}\\w&amp;\overline{z}\end{bmatrix}.\]四元数はこの形の複素2次正方行列のことだと思ってよい。
+
+
+
+
+
+
+
+May 31, 2017  9:46pm
+
+
+
+
+
+
+
+
+黒木玄 Gen Kuroki
+@genkuroki
+
+
+複素 $n$ 次正方行列全体の集合を $M_n(\mathbb C)$ と書く。行列の積に関する群 $SU(n)$ は\[SU(n)=\{\, A\in M_n(\mathbb C)\mid A^*A=AA^*=E, |A|=1\,\}\]と定義される。$SU(2)$ については\[SU(2)=\left\{\,\left.\begin{bmatrix}z&amp;-\overline{w}\\w&amp;\overline{z}\end{bmatrix}\in M_2(\mathbb C)\,\right|\,|z|^2+|w|^2=1\,\right\}.\]この式から $SU(2)$ は絶対値が $1$ の四元数全体のなす群と同一視できることや、$SU(2)$ は3次元球面 $|z|^2+|w|^2=1$ になっていることもわかります。四元数、複素2次正方行列、3次元球面などなどの風景は基本的かつ様々に一般化されるので一度は見ておいて損がないです。
+
+
+
+
+
+
+
+May 31, 2017 10:06pm
+
+
+
+
+
+
+
+
+黒木玄 Gen Kuroki
+@genkuroki
+
+
+行列群 $SU(n)$ のLie代数 $\newcommand\su{\operatorname{su}}\su(n)$ の定義はその単位元 $E$ での接空間です。計算すると\[\su(n)=\{\,X\in M_n(\mathbb C)\mid X+X^*=0, \operatorname{tr}X=0\,\}.\]接空間の定義を知らない人はこれを定義だと思ってもよいです。そして $X,Y\in\su(n)$ ならば\[[X,Y]=XY-YX\in\su(n),\\e^X=\sum_{n=0}^\infty x^n/n!\in SU(n)\]となることも容易に確認できます。$\su(2)$ が実数体上の次の基底を持つことも簡単な計算でわかります:\[I=\begin{bmatrix}i&amp;0\\0&amp;-i\end{bmatrix},\\J=\begin{bmatrix}0&amp;-1\\1&amp;0\end{bmatrix},\\K=\begin{bmatrix}0&amp;-i\\-i&amp;0\end{bmatrix}.\]ゆえに $\su(2)$ は純虚な四元数全体と同一視できる。
+
+
+
+
+
+
+
+May 31, 2017 10:11pm
+
+
+
+
+
+
+
+
+黒木玄 Gen Kuroki
+@genkuroki
+
+
+$I,J,K$ はPauli行列の $\pm i$ 倍になっています。だから、パウリ行列を扱うことは本質的に $\operatorname{su}(2)$ を扱っていることになります。
+
+
+
+
+
+
+
+May 31, 2017 10:34pm
+
+
+
+
+
+
+
+
+黒木玄 Gen Kuroki
+@genkuroki
+
+
+ここまでは行列で実現できるLie群とLie代数の典型例としての $SU(2)$ と $\operatorname{su}(2)$ に関する説明です。群やLie代数の話をしたら、その次にそれらの表現の話をしなければいけません。Lie群とLie代数の一般論を性急にあせって勉強しようとせずに、行列の計算をきちんとやっておくことが大事なことだと思います。何をやっているか理解できない一般論をやった後にそれを使って特殊な世界に降りて来ることに走るのは、数学を理解できなくなるための有力な手段の一つだと思います。特殊な場合を知って、残りは「以下同様」で理解できればものすごく効率が良くなります。「一を聞いて、十を知る」という言葉がある。
+
+
+
+
+
+
+
+May 31, 2017 10:45pm
+
+
+
+
+
+
+
+
+黒木玄 Gen Kuroki
+@genkuroki
+
+
+群 $G$ の体 $K$ 上のベクトル空間 $V$ での表現とは群 $G$ から $V$ の可逆な一次変換全体のなす群への群の準同型写像のことです。群の表現とはざくっと言ってしまえば、群の元を一次変換で表現することです。たとえば、$SU(2)$ は複素 $2\times 2$ 行列ですでに実現されているので、自然に縦ベクトルの空間 $\mathbb C^2$ での表現を持ちます。これをよく $SU(2)$ のベクター表現と呼んだりします。任意のLie群にはそのLie代数における随伴表現が定義されます。$SU(n)$ の場合にその随伴表現は $g\in SU(n)$ に対して、$\operatorname{su}(n)$ の一次変換 $\operatorname{Ad}_g$ を $\operatorname{Ad}_g X=gXg^{-1}$,  $X\in\operatorname{su}(n)$ と定めることによって定義されます。$SU(2)$ の随伴表現は実3次元ベクトル空間 $\operatorname{su}(2)$ での表現になります。
+
+
+
+
+
+
+
+May 31, 2017 10:54pm
+
+
+
+
+
+
+
+
+黒木玄 Gen Kuroki
+@genkuroki
+
+
+$SU(2)$ の随伴表現は四元数を使った実現の方で見るとわかりやすいです。$SU(2)$ の元 $g$ は絶対値が $1$ の四元数だと思えます。そのLie代数は純虚な四元数全体のなす3次元の実ベクトル空間と同一視できる。$SU(2)$ の随伴表現は\[ix+iy+kz\mapsto g(ix+iy+iz)g^{-1}\]と書けます。これが座標 $(x,y,z)$ を持つ3次元実Euclid空間の回転を実現していることが単なる計算だけでチェックできるわけです。$SU(2)$ は複素2次正方行列で実現できるので、行列の積によって縦ベクトルの空間 $\mathbb C^2$ におけるベクター表現を自明に持つのですが、それだけではなく、3次元実Euclid空間を回転させる表現も持っているわけです。「$SU(2)$ の表現を全部分類できないだろうか？」という問いに至れば表現論への入り口に立ったことになります。実ベクトル空間での表現は複素化して複素ベクトル空間における表現にしてしまって、複素ベクトル空間における表現を分類する問題にしてしまった方が色々楽になります。
+
+
+
+
+
+
+
+May 31, 2017 11:03pm
+
+
+
+
+
+
+
+
+黒木玄 Gen Kuroki
+@genkuroki
+
+
+$SU(2)$ の表現から $\newcommand\su{\operatorname{su}}\su(2)$ の表現が微分することによって得られ、逆に $\su(2)$ の表現から $SU(2)$ の表現が $\exp$ することによって得られます。だから、$SU(2)$ の表現の分類と $\su(2)$ の表現の分類は同じことになります。$\su(2)$ の表現の話にしてしまうと、表現の分類が代数的に綺麗に整理できます。すでに述べたように複素ベクトル空間での表現(複素表現)を分類する方が楽です。その理由は、$\su(2)$ の複素表現は $\su(2)$ の複素化の表現の複素表現と同一視でき、$\su(2)$ の複素化\[\mathbb C I+\mathbb C J+\mathbb C K\]と非常に扱い易いLie代数\[\operatorname{sl}_2(\mathbb C)=\{\,X\in M_2(\mathbb C)\mid \operatorname{tr}X=0\,\}\]が一致するからです。これも簡単な計算の話。
+
+
+
+
+
+
+
+May 31, 2017 11:10pm
+
+
+
+
+
+
+
+
+黒木玄 Gen Kuroki
+@genkuroki
+
+
+どうして $\newcommand\sltwo{\operatorname{sl}_2(\mathbb C)}\sltwo$ が非常に扱い易いのか。それは、所謂「昇降演算子」の方法をその表現論で利用可能だからです。既約表現のベクトルを「昇降演算子」の作用ですべて構成可能になる。「昇降演算子」による計算で楽をしてうれしかった経験のある人であれば「なるほど、いつものあの方法が使えるのか！うれしい」と感じるようなことができるのです。そのためには複素3次元のLie代数 $\sltwo$ の基底を $I,J,K$ から\[H=\begin{bmatrix}1&amp;0\\0&amp;-1\end{bmatrix},\\E=\begin{bmatrix}0&amp;1\\0&amp;0\end{bmatrix},\\F=\begin{bmatrix}0&amp;0\\1&amp;0\end{bmatrix}\]に置き換えることが必要になります。$E,F$ が「昇降演算子」の役目を果たします。
+
+
+
+
+
+
+
+May 31, 2017 11:17pm
+
+
+
+
+
+
+
+
+黒木玄 Gen Kuroki
+@genkuroki
+
+
+$E,F,H$ の基本関係式は\[[H,E]=2E,\\[H,F]=-2F.\\[E,F]=H.\]重要なのはこの関係式で $2\times 2$ 行列での表現は重要ではありません。$\lambda=0,1,2,\ldots$ に対して$\operatorname{sl}_2(\mathbb C)$ の$\lambda+1$ 次元ベクトル空間 $L(\lambda)$ における表現を次のように構成できます。・ $L(\lambda)$ は\[v,Fv,F^2v,\ldots,F^\lambda v\]を基底に持つベクトル空間であるとする。・$Ev=0$, $Hv=\lambda v$, $F^{\lambda+1}v=0$ という関係式を課す。・$E,F,H$ の $L(\lambda)$ への作用は $E,F,H$ の基本関係式を用いて自然に定める。$L(\lambda)$ たちは  $\operatorname{sl}_2(\mathbb C)$ のすべての有限次元規約表現の同型類の代表元になっています。有限次元規約表現の分類が完了した！
+
+
+
+
+
+
+
+May 31, 2017 11:26pm
+
+
+
+
+
+
+
+
+黒木玄 Gen Kuroki
+@genkuroki
+
+
+昇降演算子のアイデアが利用できるようにしたら、有限次元規約表現の分類が500文字で完了してしまった！同様のことが可能なLie代数のより広いクラスが、Kac-Moody代数です。Kac-Moody代数は $\operatorname{sl}_2(\mathbb C)$ の一般化に過ぎないので、「Kac-Moody」のような聞き慣れない言葉が出て来てもびびる必要はありません。昇降演算子の話をより一般的にするだけです。Kac-Moody代数は $\operatorname{su}(n)$ の複素化 $\operatorname{sl}_n(\mathbb C)$ も含んでおり、任意の有限次元半単純Lie代数を含んでいます。そして、それだけではなく、無限次元のアフィンLie代数も含んでいるところがとてもうれしい。Kac-Moody代数の表現論はアフィンLie代数のような無限次元Lie代数であっても、$\operatorname{sl}_2(\mathbb C)$ の場合と同様に昇降演算子のアイデアで表現達を分類できることを主張しています。びびらず「以下同様」で行こう！
+
+
+
+
+
+
+
+May 31, 2017 11:34pm
+
+
+
+
+
+
+
+
+黒木玄 Gen Kuroki
+@genkuroki
+
+
+$2\times 2$ 行列の計算をがんばって大量にした人が次にするべきことは、$3\times 3$ 行列の計算です。$SU(3)$ のLie代数の複素化はトレースが $0$ の複素3次正方行列全体のなす $8$ 次元の複素ベクトル空間になります(これも計算で解決できる)。$(i,j)$ 成分だけが $1$ で他の成分が $0$ の3次正方行列を $E_{ij}$ と書くと、$SU(3)$ のLie代数の複素化の基底として次が取れます。\[H_1=E_{11}-E_{22},\\H_2=E_{22}-E_{33},\\E_{12},\quad E_{23},\quad E_{13},\\E_{21},\quad E_{32},\quad E_{31}.\]これらは $\operatorname{sl}_2(\mathbb C)$ の場合の $H,E,F$ の一般化になっています。$SU(3)$ の随伴表現の複素化はこれらを基底に持つ8次元のベクトル空間での表現になります。
+
+
+
+
+
+
+
+May 31, 2017 11:40pm
+
+
+
+
+
+
+
+
+黒木玄 Gen Kuroki
+@genkuroki
+
+
+$SU(3)$ の8次元表現を随伴表現としてさらっと構成しましたが、$SU(3)$ の8次元表現はクォークの理論的発見に繋がるハドロンの「八道説」による分類の話そのものになっています。https://ja.wikipedia.org/wiki/%E3%82%AF%E3%82%A9%E3%83%BC%E3%82%AF%E3%83%A2%E3%83%87%E3%83%ABその辺の話はEdward Frenkelさんも数学ミステリー白熱教室第4回で説明していました。多分、表現論の話をするときには定番の話題だと思います。https://twitter.com/genkuroki/status/674019150734360577 https://mathtod.online/media/1jWq-ZQLE3xqsjNdVLw https://mathtod.online/media/NFGV9VitI85F49soC6Q
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+June  1, 2017 12:02am
+
+
+
+
+
+
+
+
+黒木玄 Gen Kuroki
+@genkuroki
+
+
+$SU(3)$ のLie代数の複素化 $\operatorname{sl}_3(\mathbb C)$ は以下を生成元に持ちます:\[H_i=E_{ii}-E_{i+1,i+1},\\E_i=E_{i,i+1},\\F_i=E_{i+1,i}.\]ここで $i=1,2$ です。そして、それらは次を満たします:\[[H_i,H_j]=0,\\[H_i,E_j]=a_{ij}E_j,\\[H_i,F_j]=-a_{ij}F_j,\\[E_i,F_j]=\delta_{ij}H_i,\\\newcommand\ad{\operatorname{ad}}(\ad E_i)^{1-a_{ij}}E_j=0 \quad(i\ne j),\\(\ad F_i)^{1-a_{ij}}F_j=0 \quad(i\ne j).\]ここで\[(\ad A)B=[A,B],\\[a_{ij}]=\begin{bmatrix}2&amp;-1\\-1&amp;2\end{bmatrix}\]これの証明も単なる行列の易しい計算です。
+
+
+
+
+
+
+
+
+
+
+
+
+黒木玄 Gen Kuroki
+@genkuroki
+
+以上の計算をがんばってすることの御利益はKac-Moody代数の定義をすぐに理解できるようになることです。一つ前の発言の行列 $[a_{ij}]$ を・サイズは $\ell$ とする。・対角成分はすべて $2$ であるとする。・非対角成分は非負の整数で、$i\ne j$ について $a_{ij}=0$ と $a_{ji}=0$ は同値であるとする。と一般化しましょう。生成元 $H_i,E_i,F_i$ ($i=1,\ldots,\ell$) と一つ前の発言に書いた形の関係式で定義されるLie代数が型 $[a_{ij}]$ のKac-Moody代数です。「八道説」の $\operatorname{sl}_3(\mathbb C)$ での随伴表現による解釈を知っていて、その関係式も実際に自分の手で計算してよく知っていれば、Kac-Moody代数の定義は典型的に「以下同様」のスタイルになっていることを理解できるわけです。数学は基本的にこういうみもふたもない話なので、聞き慣れない数学用語に何か「権威」を感じている場合にはほぼ確実に誤解していることになると思います。
+
+
+2017年06月01日 00:09
+·
+Web
+·
+0
+·
+1
+·
+Webで開く
+
+
+
+
+
+
+
+
+
+mathtod.online
+
+powered by Mastodon
+
+
+
+
+
+
